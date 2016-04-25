@@ -5,9 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObject.Login;
 import pageObject.Secure;
 
@@ -25,6 +23,7 @@ public class LoginTests {
     @BeforeTest
     public void setup() {
         driver = new FirefoxDriver();
+        driver.manage().window().maximize();
         driver.get("http://the-internet.herokuapp.com/login");
     }
 
@@ -38,21 +37,27 @@ public class LoginTests {
         Assert.assertTrue(SecurePage.isLoggedIn());
     }
 
-    @AfterTest
-    public void goNext1() {
-        driver.get("http://the-internet.herokuapp.com/login");
-    }
-
     @Test
     public void loginTest2() {
-        driver.get("http://the-internet.herokuapp.com/login"); //Still impossible without this one
+        //driver.get("http://the-internet.herokuapp.com/login"); //Still impossible without this one
         Login loginPage = new Login(driver);
-        loginPage.typeLogin("tomsmith");
-        loginPage.typePass("SuperSecretPassword!");
-        loginPage.clickLogin();
+        loginPage.typeLogin("tomsmith")
+            .typePass("SuperSecretPassword!")
+            .clickLogin();
 
         Secure SecurePage = new Secure(driver);
         Assert.assertTrue(SecurePage.isLoggedIn());
+    }
+
+
+    @AfterMethod
+    public void goNext1() throws InterruptedException {
+        driver.get("http://the-internet.herokuapp.com/login");
+    }
+
+    @AfterClass
+    public void tearDown(){
         driver.close();
     }
+
 }
