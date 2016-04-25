@@ -27,6 +27,15 @@ public class LoginTests {
         driver.get("http://the-internet.herokuapp.com/login");
     }
 
+    @AfterMethod
+    public void goNext1() throws InterruptedException {
+        driver.get("http://the-internet.herokuapp.com/login");
+    }
+
+    @AfterClass
+    public void tearDown(){
+        driver.close();
+    }
 
     @Test
     public void loginTest1() throws InterruptedException {
@@ -42,22 +51,10 @@ public class LoginTests {
         //driver.get("http://the-internet.herokuapp.com/login"); //Still impossible without this one
         Login loginPage = new Login(driver);
         loginPage.typeLogin("tomsmith")
-            .typePass("SuperSecretPassword!")
-            .clickLogin();
+                .typePass("SuperSecretPassword!")
+                .clickLogin();
 
         Secure SecurePage = new Secure(driver);
         Assert.assertTrue(SecurePage.isLoggedIn());
     }
-
-
-    @AfterMethod
-    public void goNext1() throws InterruptedException {
-        driver.get("http://the-internet.herokuapp.com/login");
-    }
-
-    @AfterClass
-    public void tearDown(){
-        driver.close();
-    }
-
 }
