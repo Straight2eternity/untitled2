@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e20599ba-d8dc-4f54-8fbd-0de8c59b9c9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_codeborne_phantomjsdriver_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_codeborne_selenide_3_5_1.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/pageFactory/Login.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/pageObject/Secure.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/testPF/LoginTests.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/pageFactory/Login.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/pageObject/Secure.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/testPF/LoginTests.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pageObject/Login.class" afterPath="$PROJECT_DIR$/target/test-classes/pageObject/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/testPO/LoginTests.class" afterPath="$PROJECT_DIR$/target/test-classes/testPO/LoginTests.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pageObject/Login.java" afterPath="$PROJECT_DIR$/src/test/java/pageObject/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/testPO/LoginTests.java" afterPath="$PROJECT_DIR$/src/test/java/testPO/LoginTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled1.iml" afterPath="$PROJECT_DIR$/untitled1.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
     </list>
     <ignored path="untitled1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,8 +28,8 @@
       <file leaf-file-name="LoginTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/testPO/LoginTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="391">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="e#447#448#0" expanded="true" />
                 <element signature="e#510#511#0" expanded="true" />
@@ -677,6 +662,14 @@
       <option name="presentableId" value="Default" />
       <updated>1461050952842</updated>
     </task>
+    <task id="LOCAL-00001" summary="New Hw">
+      <created>1462800995265</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1462800995265</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -777,6 +770,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New Hw" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Hw" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -910,8 +907,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/testPO/LoginTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="391">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
             <element signature="e#447#448#0" expanded="true" />
             <element signature="e#510#511#0" expanded="true" />
