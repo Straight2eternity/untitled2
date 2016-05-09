@@ -1,60 +1,45 @@
 package testPO;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
-import org.testng.annotations.*;
+import com.codeborne.selenide.Condition;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import pageObject.Login;
-import pageObject.Secure;
 
-import java.util.concurrent.TimeUnit;
-
-import static org.testng.annotations.AfterTest.*;
+import static com.codeborne.selenide.Selenide.*;
 
 /**
  * Created by Администратор on 21.04.2016.
  */
 public class LoginTests {
-
-    WebDriver driver;
+     Login login = new Login();
 
     @BeforeTest
     public void setup() {
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("http://the-internet.herokuapp.com/login");
+        open("http://the-internet.herokuapp.com/login");
     }
 
     @AfterMethod
-    public void goNext1() throws InterruptedException {
-        driver.get("http://the-internet.herokuapp.com/login");
+    public void goNext1(){
+        open("http://the-internet.herokuapp.com/login");
     }
 
     @AfterClass
     public void tearDown(){
-        driver.close();
+        close();
     }
 
     @Test
-    public void loginTest1() throws InterruptedException {
-        Login loginPage = new Login(driver);
-        loginPage.logginIn("tomsmith", "SuperSecretPassword!");
-
-        Secure SecurePage = new Secure(driver);
-        Assert.assertTrue(SecurePage.isLoggedIn());
+    public void loginTest1(){
+        login.logginIn("tomsmith","SuperSecretPassword!");
+        $("#flash").shouldBe(Condition.visible);
     }
 
     @Test
-    public void loginTest2() {
-        //driver.get("http://the-internet.herokuapp.com/login"); //Still impossible without this one
-        Login loginPage = new Login(driver);
-        loginPage.typeLogin("tomsmith")
-                .typePass("SuperSecretPassword!")
-                .clickLogin();
-
-        Secure SecurePage = new Secure(driver);
-        Assert.assertTrue(SecurePage.isLoggedIn());
+    public void loginTest2(){
+        login.logginIn("tomsmith1","SuperSecretPassword!");
+        $("#flash").shouldNotBe(Condition.visible);
     }
+
 }
