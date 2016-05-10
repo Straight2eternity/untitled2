@@ -37,13 +37,13 @@ public class LoginTests {
     public void loginTest1() throws InterruptedException {
         Thread.sleep(1000);
         login.logginIn("tomsmith","SuperSecretPassword!");
-        $("#flash").shouldBe(Condition.visible);
+        $("#flash").shouldHave(Condition.hasText("You logged into a secure area!"));
     }
 
     @Test
     public void loginTest2() throws InterruptedException {
         login.logginIn("tomsmith1","SuperSecretPassword!");
-        $("#flash").shouldNotBe(Condition.visible);
+        $("#flash").shouldHave(Condition.hasText(" Your username is invalid!"));
     }
 
     @Test
